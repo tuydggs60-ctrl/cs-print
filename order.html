@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order via WhatsApp | CS PRIN</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=AdihausDIN:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" aria-label="CS PRIN">
+                <img src="images/logo.svg" alt="CS PRIN logo">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Kembali</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="https://wa.me/6285134625265" target="_blank" rel="noopener noreferrer" class="btn-wa">Chat Admin</a>
+        </div>
+    </header>
+
+    <main class="order-page">
+        <div class="order-card">
+            <p class="order-badge">Order via WhatsApp</p>
+            <h1>Pilih produk yang ingin Anda order</h1>
+            <p class="order-description">Pilih salah satu opsi di bawah ini, lalu lanjutkan ke WhatsApp agar admin bisa menyiapkan harga dan estimasi sesuai kebutuhan Anda.</p>
+
+            <form id="order-form">
+                <div class="field-group">
+                    <label for="order-category">Kategori</label>
+                    <select id="order-category" class="order-select">
+                        <option value="Pakaian">Pakaian</option>
+                        <option value="Aksesoris">Aksesoris</option>
+                        <option value="ATK">ATK</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label>Pilihan produk</label>
+                    <div id="option-list" class="option-list" aria-live="polite"></div>
+                </div>
+
+                <div class="field-group">
+                    <label>Pilihan warna</label>
+                    <div id="color-list" class="color-list" aria-live="polite"></div>
+                    <p class="color-helper">warna lain dan disain konsultasi di wa</p>
+                </div>
+
+                <div class="field-group">
+                    <label for="order-quantity">Jumlah</label>
+                    <div id="quantity-list" class="quantity-list" aria-live="polite">
+                        <input id="order-quantity" type="number" class="quantity-input" min="1" step="1" value="1" placeholder="Contoh: 10">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="order-material">Bahan / material</label>
+                    <input id="order-material" class="order-input" list="material-options" placeholder="Cari bahan / material" autocomplete="off">
+                    <datalist id="material-options">
+                        <option value="Tidak perlu / belum ditentukan"></option>
+                        <option value="Jersey Milano"></option>
+                        <option value="Jersey Milano Premium"></option>
+                        <option value="Jersey Cotton Combed 30s"></option>
+                        <option value="Jersey Cotton Combed 24s"></option>
+                        <option value="Jersey Cotton 20s"></option>
+                        <option value="Jersey CVC"></option>
+                        <option value="Jersey Interlock"></option>
+                        <option value="Jersey Polos"></option>
+                        <option value="Jersey Premium"></option>
+                        <option value="Jersey Lacoste"></option>
+                        <option value="Jersey Fleece"></option>
+                        <option value="Jersey Microfiber"></option>
+                        <option value="Jersey Dry Fit"></option>
+                        <option value="Jersey Sport"></option>
+                        <option value="Jersey Rayon"></option>
+                        <option value="Jersey Nylon"></option>
+                        <option value="Jersey Stretch"></option>
+                        <option value="Jersey Sablon DTG"></option>
+                        <option value="Jersey Sablon Vinyl"></option>
+                        <option value="Jersey Sablon Rubber"></option>
+                        <option value="Jersey Split"></option>
+                        <option value="Jersey Pique"></option>
+                        <option value="Jersey Printed"></option>
+                        <option value="Jersey Distro"></option>
+                        <option value="Cotton Combed 30s"></option>
+                        <option value="Cotton Combed 24s"></option>
+                        <option value="Cotton Combed 20s"></option>
+                        <option value="Cotton Twill"></option>
+                        <option value="Cotton Drill"></option>
+                        <option value="Cotton Oxford"></option>
+                        <option value="Cotton Linen"></option>
+                        <option value="Cotton Terry"></option>
+                        <option value="Canvas"></option>
+                        <option value="Denim"></option>
+                        <option value="Paris"></option>
+                        <option value="Batik"></option>
+                        <option value="Katun Jepang"></option>
+                        <option value="Katun Lokal"></option>
+                        <option value="Polyester"></option>
+                        <option value="Polyester Satin"></option>
+                        <option value="Polyester Mesh"></option>
+                        <option value="Polyester Baby Terry"></option>
+                        <option value="Nylon"></option>
+                        <option value="Spandex"></option>
+                        <option value="Viscose"></option>
+                        <option value="Modal"></option>
+                        <option value="Linen Rayon"></option>
+                        <option value="Sifon"></option>
+                        <option value="Tulle"></option>
+                        <option value="Brushed Cotton"></option>
+                        <option value="Grams HVS"></option>
+                        <option value="Kain Kanvas"></option>
+                        <option value="Kain Flanel"></option>
+                        <option value="Kain Drill"></option>
+                        <option value="Kain Corduroy"></option>
+                        <option value="Kain Chino"></option>
+                        <option value="Kain Wool"></option>
+                        <option value="Kain Satin"></option>
+                        <option value="Kain Ripstop"></option>
+                        <option value="Kain Hoodie"></option>
+                        <option value="Kain Fleece"></option>
+                        <option value="Kain Suede"></option>
+                        <option value="Kain Parasut"></option>
+                        <option value="Jersey Belgian"></option>
+                        <option value="Jersey Jepang"></option>
+                        <option value="Jersey Lokal"></option>
+                        <option value="Cotton 100%"></option>
+                        <option value="Cotton 60/40"></option>
+                        <option value="Cotton 65/35"></option>
+                        <option value="Cotton 80/20"></option>
+                        <option value="Cotton Premium"></option>
+                        <option value="Cotton TC"></option>
+                        <option value="Cotton Blend"></option>
+                        <option value="Cotton Organic"></option>
+                        <option value="Cotton Slub"></option>
+                        <option value="Cotton Air Mesh"></option>
+                        <option value="Cotton Hyget"></option>
+                        <option value="Cotton Single Jersey"></option>
+                        <option value="Cotton Double Jersey"></option>
+                        <option value="Cotton Combed Premium"></option>
+                        <option value="Cotton Combed 32s"></option>
+                        <option value="Cotton Combed 28s"></option>
+                        <option value="Cotton Combed 26s"></option>
+                        <option value="Cotton Interlock"></option>
+                        <option value="Cotton Pique"></option>
+                        <option value="Cotton Rib"></option>
+                        <option value="Cotton Fleece"></option>
+                        <option value="Cotton French Terry"></option>
+                        <option value="Cotton Denim"></option>
+                        <option value="Denim Stretch"></option>
+                        <option value="Denim Original"></option>
+                        <option value="Denim Washed"></option>
+                        <option value="Polycotton"></option>
+                        <option value="Polycotton 65/35"></option>
+                        <option value="Polycotton 55/45"></option>
+                        <option value="Polyester 150D"></option>
+                        <option value="Polyester 200D"></option>
+                        <option value="Polyester 300D"></option>
+                        <option value="Polyester Recycle"></option>
+                        <option value="Polyester Taslan"></option>
+                        <option value="Polyester Diamond"></option>
+                        <option value="Polyester Oxford"></option>
+                        <option value="Polyester Dobby"></option>
+                        <option value="Polyester Twill"></option>
+                        <option value="Polyester Water Repellent"></option>
+                        <option value="Polyester UV Protection"></option>
+                        <option value="Nilon / Nylon"></option>
+                        <option value="Nylon Ripstop"></option>
+                        <option value="Nylon Oxford"></option>
+                        <option value="Nylon Taslan"></option>
+                        <option value="Nylon Mesh"></option>
+                        <option value="Spandex 2%"></option>
+                        <option value="Spandex 5%"></option>
+                        <option value="Spandex 8%"></option>
+                        <option value="Lycra"></option>
+                        <option value="Elastane"></option>
+                        <option value="Viscose 100%"></option>
+                        <option value="Viscose Rayon"></option>
+                        <option value="Rayon Premium"></option>
+                        <option value="Modal Premium"></option>
+                        <option value="Bamboo Cotton"></option>
+                        <option value="Bamboo Viscose"></option>
+                        <option value="Tencel"></option>
+                        <option value="Microfiber"></option>
+                        <option value="Microfiber Suede"></option>
+                        <option value="Microfiber Polyester"></option>
+                        <option value="Fleece Polos"></option>
+                        <option value="Fleece Premium"></option>
+                        <option value="French Terry"></option>
+                        <option value="Hoodie Fleece"></option>
+                        <option value="Baby Terry"></option>
+                        <option value="Wool Blend"></option>
+                        <option value="Wool Premium"></option>
+                        <option value="Linen"></option>
+                        <option value="Linen Cotton"></option>
+                        <option value="Linen Rayon"></option>
+                        <option value="Canvas Cotton"></option>
+                        <option value="Canvas Premium"></option>
+                        <option value="Drill Cotton"></option>
+                        <option value="Twill Cotton"></option>
+                        <option value="Corduroy"></option>
+                        <option value="Chino"></option>
+                        <option value="Batik Premium"></option>
+                        <option value="Batik Kombinasi"></option>
+                        <option value="Batik Printing"></option>
+                        <option value="Satin Premium"></option>
+                        <option value="Satin Jepang"></option>
+                        <option value="Satin Lokal"></option>
+                        <option value="Satin Twill"></option>
+                        <option value="Parasut"></option>
+                        <option value="Kain Parasut Premium"></option>
+                        <option value="Mesh Sports"></option>
+                        <option value="Mesh Airflow"></option>
+                        <option value="Mesh Jacquard"></option>
+                        <option value="Tarpaulin"></option>
+                        <option value="Vinyl"></option>
+                        <option value="Sticker Vinyl"></option>
+                        <option value="HVS 100gsm"></option>
+                        <option value="HVS 120gsm"></option>
+                        <option value="Art Paper 120gsm"></option>
+                        <option value="Art Paper 150gsm"></option>
+                        <option value="Art Paper 200gsm"></option>
+                        <option value="Glossy Paper"></option>
+                        <option value="Matt Paper"></option>
+                        <option value="Karton 260gsm"></option>
+                        <option value="Karton 310gsm"></option>
+                        <option value="Kertas Manila"></option>
+                        <option value="Sticker Glossy"></option>
+                        <option value="Sticker Matte"></option>
+                        <option value="Sticker Transparan"></option>
+                        <option value="Cotton Jersey 160gsm"></option>
+                        <option value="Cotton Jersey 180gsm"></option>
+                        <option value="Cotton Jersey 200gsm"></option>
+                        <option value="Cotton Polyester 50/50"></option>
+                        <option value="Cotton Polyester 60/40"></option>
+                        <option value="Cotton Polyester 65/35"></option>
+                        <option value="Cotton Bamboo Blend"></option>
+                        <option value="Cotton High Twist"></option>
+                        <option value="Cotton Double Knit"></option>
+                        <option value="Cotton Fine Knit"></option>
+                        <option value="Cotton Heavy Weight"></option>
+                        <option value="Cotton Lightweight"></option>
+                        <option value="Cotton Thermal"></option>
+                        <option value="Cotton Honeycomb"></option>
+                        <option value="Cotton Moleskin"></option>
+                        <option value="Cotton Poplin"></option>
+                        <option value="Cotton Percale"></option>
+                        <option value="Cotton Softshell"></option>
+                        <option value="Cotton Flannel"></option>
+                        <option value="Cotton Woven"></option>
+                        <option value="Cotton Broken Twill"></option>
+                        <option value="Cotton Satin Finish"></option>
+                        <option value="Jersey Bahan Sport"></option>
+                        <option value="Jersey Performance"></option>
+                        <option value="Jersey Eco"></option>
+                        <option value="Jersey Recycled"></option>
+                        <option value="Jersey Water Resistant"></option>
+                        <option value="Jersey Anti UV"></option>
+                        <option value="Jersey High Compression"></option>
+                        <option value="Polyester Suede"></option>
+                        <option value="Polyester Fleece"></option>
+                        <option value="Polyester Brushed"></option>
+                        <option value="Polyester Satin Premium"></option>
+                        <option value="Polyester Cotton Blend"></option>
+                        <option value="Polyester Soft Touch"></option>
+                        <option value="Polyester Premium Soft"></option>
+                        <option value="Nylon Polyester Blend"></option>
+                        <option value="Nylon Softshell"></option>
+                        <option value="Nylon Waterproof"></option>
+                        <option value="Acrylic Blend"></option>
+                        <option value="Wool Cotton Blend"></option>
+                        <option value="Wool Felt"></option>
+                        <option value="Tweed"></option>
+                        <option value="Gabardine"></option>
+                        <option value="Oxford Premium"></option>
+                        <option value="Tafeta"></option>
+                        <option value="Crepe"></option>
+                        <option value="Brokat"></option>
+                        <option value="Velvet"></option>
+                        <option value="Velour"></option>
+                        <option value="Suede Premium"></option>
+                        <option value="Leatherette"></option>
+                        <option value="PU Leather"></option>
+                        <option value="PVC"></option>
+                        <option value="Kain Kulit Sintetis"></option>
+                        <option value="Kain Kain Nilon"></option>
+                        <option value="Kain Press"></option>
+                        <option value="Kain Goni"></option>
+                        <option value="Kain Mudcloth"></option>
+                        <option value="Kain Herringbone"></option>
+                        <option value="Kain Twill Premium"></option>
+                        <option value="Kain Dreamer"></option>
+                        <option value="Kain Komposit"></option>
+                        <option value="Kain Premium Custom"></option>
+                        <option value="Kertas Ivory 260gsm"></option>
+                        <option value="Kertas Ivory 300gsm"></option>
+                        <option value="Kertas Coklat"></option>
+                        <option value="Kertas Foto Glossy"></option>
+                        <option value="Kertas Foto Matte"></option>
+                        <option value="Kertas A4 Premium"></option>
+                        <option value="Kertas A3 Premium"></option>
+                        <option value="Kertas BW"></option>
+                        <option value="Kertas Offset"></option>
+                        <option value="Kertas Duplex"></option>
+                        <option value="Sticker Cuting"></option>
+                        <option value="Sticker Transparan Premium"></option>
+                        <option value="Sticker Bening"></option>
+                        <option value="Sticker UV"></option>
+                        <option value="Bahan lain / custom"></option>
+                    </datalist>
+                </div>
+
+                <div class="field-group">
+                    <label for="order-size">Ukuran</label>
+                    <input id="order-size" type="text" class="order-input" placeholder="Contoh: 2m x 3m, M, XL, 40x60 cm">
+                    <small id="size-hint" class="size-hint">Contoh: untuk baliho atau banner, gunakan format panjang x lebar.</small>
+                </div>
+
+                <div class="field-group">
+                    <label>Desain</label>
+                    <div id="design-list" class="design-list" aria-live="polite">
+                        <button type="button" class="design-option active" data-value="Pakai desain sendiri">Pakai desain sendiri</button>
+                        <button type="button" class="design-option" data-value="Butuh desain dari admin">Butuh desain dari admin</button>
+                        <button type="button" class="design-option" data-value="Kirim referensi">Kirim referensi</button>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="order-note">Catatan tambahan</label>
+                    <textarea id="order-note" rows="4" placeholder="Contoh: target waktu, atau referensi desain"></textarea>
+                </div>
+
+                <button type="submit" class="btn-wa-submit">Lanjut ke WhatsApp</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const waNumber = '6285134625265';
+        const colorOptions = [
+            { name: 'Merah', value: '#d62828' },
+            { name: 'Maroon', value: '#800000' },
+            { name: 'Orange', value: '#f77f00' },
+            { name: 'Kuning', value: '#fcbf49' },
+            { name: 'Hijau', value: '#2a9d8f' },
+            { name: 'Hijau Lumut', value: '#3a7d44' },
+            { name: 'Lime', value: '#9acd32' },
+            { name: 'Biru', value: '#0077b6' },
+            { name: 'Navy', value: '#1d3557' },
+            { name: 'Aqua', value: '#00bcd4' },
+            { name: 'Ungu', value: '#6a4c93' },
+            { name: 'Violet', value: '#7b2cbf' },
+            { name: 'Pink', value: '#ff5d8f' },
+            { name: 'Rose', value: '#f4acb7' },
+            { name: 'Putih', value: '#f8f9fa' },
+            { name: 'Hitam', value: '#111111' },
+            { name: 'Abu-abu', value: '#8d99ae' },
+            { name: 'Coklat', value: '#7b4b3a' },
+            { name: 'Cream', value: '#f5e6c8' },
+            { name: 'Beige', value: '#d6b68a' },
+            { name: 'Silver', value: '#bfc0c0' },
+            { name: 'Gold', value: '#d4af37' },
+            { name: 'Tan', value: '#c58b65' },
+            { name: 'Olive', value: '#808000' }
+        ];
+        const productMap = {
+            Pakaian: [
+                'Kaos Custom',
+                'Seragam Custom',
+                'Kemeja & PDH Custom',
+                'Jersey Custom',
+                'Rompi Custom',
+                'Jaket Custom',
+                'Celana Custom',
+                'Pelengkap Custom'
+            ],
+            Aksesoris: [
+                'ID Card Custom',
+                'Topi Custom',
+                'Mug Custom',
+                'Gantungan Kunci Custom',
+                'Bener Custom',
+                'Mendali/Piagam Custom',
+                'Undangan Custom',
+                'Baliho Custom'
+            ],
+            ATK: [
+                'Stiker',
+                'Banner',
+                'Katalog',
+                'Cetak undangan',
+                'Produk ATK Lainnya'
+            ],
+            Lainnya: [
+                'Custom Lainnya',
+                'Konsultasi Desain',
+                'Butuh estimasi harga'
+            ]
+        };
+
+        const orderCategory = document.getElementById('order-category');
+        const optionList = document.getElementById('option-list');
+        const colorList = document.getElementById('color-list');
+        const orderForm = document.getElementById('order-form');
+        const orderMaterial = document.getElementById('order-material');
+        const orderSize = document.getElementById('order-size');
+        const sizeHint = document.getElementById('size-hint');
+        const orderNote = document.getElementById('order-note');
+        const orderQuantity = document.getElementById('order-quantity');
+        const designButtons = document.querySelectorAll('.design-option');
+        const params = new URLSearchParams(window.location.search);
+
+        orderMaterial.addEventListener('focus', () => {
+            if (orderMaterial.value === 'Tidak perlu / belum ditentukan') {
+                orderMaterial.value = '';
+            }
+        });
+        const preselectedProduct = params.get('product') || '';
+
+        function updateSizeHint() {
+            const selectedOption = document.querySelector('.option-card.active')?.dataset.value || '';
+            const selectedCategory = orderCategory.value;
+            const productNeedsDimension = ['Baliho Custom', 'Banner', 'Undangan Custom', 'Katalog', 'Stiker', 'Mug Custom', 'ID Card Custom', 'Topi Custom'];
+
+            if (productNeedsDimension.includes(selectedOption) || selectedCategory === 'ATK') {
+                sizeHint.textContent = 'Contoh: untuk baliho atau banner, gunakan format panjang x lebar (misalnya 2m x 3m).';
+            } else if (selectedOption.includes('Kaos') || selectedOption.includes('Seragam') || selectedOption.includes('Jersey') || selectedOption.includes('Jaket') || selectedOption.includes('Rompi') || selectedOption.includes('Celana')) {
+                sizeHint.textContent = 'Contoh: ukuran S, M, L, XL, atau ukuran badan.';
+            } else {
+                sizeHint.textContent = 'Contoh: untuk baliho atau banner, gunakan format panjang x lebar.';
+            }
+        }
+
+        function renderOptions(category) {
+            const options = productMap[category] || [];
+            optionList.innerHTML = '';
+
+            options.forEach((option) => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'option-card';
+                button.dataset.value = option;
+                button.textContent = option;
+
+                if (option === preselectedProduct || (options.includes(preselectedProduct) && !optionList.querySelector('.option-card.active'))) {
+                    button.classList.add('active');
+                }
+
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.option-card').forEach((item) => item.classList.remove('active'));
+                    button.classList.add('active');
+                    updateSizeHint();
+                });
+
+                optionList.appendChild(button);
+            });
+        }
+
+        function renderColors() {
+            colorList.innerHTML = '';
+
+            colorOptions.forEach((color) => {
+                const wrap = document.createElement('div');
+                wrap.className = 'color-option';
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'color-card';
+                button.dataset.value = color.name;
+                button.title = color.name;
+                button.style.setProperty('--swatch-color', color.value);
+
+                if (color.name === 'Merah') {
+                    button.classList.add('active');
+                }
+
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.color-card').forEach((item) => item.classList.remove('active'));
+                    button.classList.add('active');
+                });
+
+                const label = document.createElement('span');
+                label.className = 'color-label';
+                label.textContent = color.name;
+
+                wrap.appendChild(button);
+                wrap.appendChild(label);
+                colorList.appendChild(wrap);
+            });
+        }
+
+        orderCategory.addEventListener('change', (event) => {
+            const selectedCategory = event.target.value;
+            renderOptions(selectedCategory);
+            updateSizeHint();
+        });
+
+        renderOptions(orderCategory.value);
+        renderColors();
+        updateSizeHint();
+
+        designButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                designButtons.forEach((item) => item.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        orderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const username = localStorage.getItem('ptk_visitor_username') || localStorage.getItem('ptk_visitor_name') || 'Pengunjung';
+            const selectedOption = document.querySelector('.option-card.active')?.dataset.value || 'Custom';
+            const selectedColor = document.querySelector('.color-card.active')?.dataset.value || 'Merah';
+            const selectedSize = orderSize.value.trim() || 'Belum ditentukan';
+            const selectedQuantity = orderQuantity.value.trim() || '1';
+            const selectedMaterial = orderMaterial.value;
+            const selectedDesign = document.querySelector('.design-option.active')?.dataset.value || 'Pakai desain sendiri';
+            const note = orderNote.value.trim();
+            const greeting = localStorage.getItem('ptk_visitor_login') === 'true' ? `Halo ${username}, saya ingin order produk berikut:` : 'Halo, saya ingin order produk berikut:';
+            const message = [
+                greeting,
+                `- Produk: ${selectedOption}`,
+                `- Kategori: ${orderCategory.value}`,
+                `- Warna: ${selectedColor}`,
+                `- Jumlah: ${selectedQuantity}`,
+                `- Bahan: ${selectedMaterial}`,
+                `- Ukuran: ${selectedSize}`,
+                `- Desain: ${selectedDesign}`,
+                note ? `- Catatan: ${note}` : '- Catatan: -',
+                '',
+                'Mohon info harga, ukuran, dan estimasi pengerjaan.'
+            ].join('\n');
+
+            const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank', 'noopener,noreferrer');
+        });
+    </script>
+</body>
+</html>

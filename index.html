@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS PRIN | Print & Custom Pontianak</title>
+    git --version    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=AdihausDIN:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <p>Konveksi, sablon, dan print custom untuk kebutuhan bisnis, komunitas, dan event.</p>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="#" aria-label="CS PRIN">
+                <img src="images/logo.svg" alt="CS PRIN logo">
+            </a>
+        </div>
+        <nav class="nav-links" aria-label="Navigasi utama">
+            <a href="#" class="active">Kontak Admin</a>
+        </nav>
+        <div class="nav-icons">
+            <input id="search-bar" type="text" placeholder="Cari layanan..." class="search-bar">
+            <div id="visitor-status" class="visitor-status hidden">
+                <span id="visitor-name-label">Pengunjung</span>
+                <button type="button" class="btn-logout" id="logout-button">Logout</button>
+            </div>
+            <button type="button" class="btn-login" id="login-toggle">Login Pengunjung</button>
+            <a href="order.html" class="btn-wa">Order via WA</a>
+        </div>
+    </header>
+
+    <div id="welcome-banner" class="welcome-banner hidden">
+        <p>Selamat datang, <strong id="welcome-name">Pengunjung</strong>!</p>
+    </div>
+
+    <div class="login-modal hidden" id="login-modal" aria-hidden="true">
+        <div class="login-card">
+            <button type="button" class="close-login" id="close-login" aria-label="Tutup login">×</button>
+            <h2 id="login-title">Buat Akun Pengunjung</h2>
+
+            <div class="auth-toggle">
+                <button type="button" class="toggle-btn active" id="register-mode-btn">Buat Akun</button>
+                <button type="button" class="toggle-btn" id="login-mode-btn">Login</button>
+            </div>
+
+            <form id="register-form" novalidate>
+                <div class="field-group">
+                    <label for="register-username">Username</label>
+                    <input id="register-username" name="register-username" type="text" placeholder="Masukkan username" maxlength="30">
+                </div>
+                <div class="field-group">
+                    <label for="register-password">Password</label>
+                    <div class="password-field-wrap">
+                        <input id="register-password" name="register-password" type="password" placeholder="Masukkan password" maxlength="40">
+                        <button type="button" class="toggle-password" data-target="register-password" aria-label="Lihat password">Lihat</button>
+                    </div>
+                </div>
+                <p id="login-message" class="login-message" aria-live="polite"></p>
+                <button type="submit" class="btn-login-submit">Buat Akun</button>
+            </form>
+
+            <form id="login-form" class="hidden" novalidate>
+                <div class="field-group">
+                    <label for="login-username">Username</label>
+                    <input id="login-username" name="login-username" type="text" placeholder="Masukkan username" maxlength="30">
+                </div>
+                <div class="field-group">
+                    <label for="login-password">Password</label>
+                    <div class="password-field-wrap">
+                        <input id="login-password" name="login-password" type="password" placeholder="Masukkan password" maxlength="40">
+                        <button type="button" class="toggle-password" data-target="login-password" aria-label="Lihat password">Lihat</button>
+                    </div>
+                </div>
+                <p id="login-message-2" class="login-message" aria-live="polite"></p>
+                <button type="submit" class="btn-login-submit">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="page-shell">
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">Print, Sablon & Konveksi Pontianak</span>
+                <h1>Solusi produk custom yang rapi, cepat, dan siap dipakai.</h1>
+                <p>Kami membantu kebutuhan branding, event, organisasi, dan bisnis dengan produk custom seperti kaos, jersey, seragam, topi, ID card, mug, banner, serta berbagai kebutuhan print dan promosi.</p>
+                <div class="hero-actions">
+                    <a href="https://www.instagram.com/sentral_konveksi_pontianak?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn-primary">Lihat contoh desain</a>
+                    <a href="order.html?product=Konsultasi%20Desain" class="btn-secondary">Konsultasi desain</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <div class="mini-stat">
+                    <strong>500+</strong>
+                    <span>Pesanan custom</span>
+                </div>
+                <div class="mini-stat">
+                    <strong>24 Jam</strong>
+                    <span>Estimasi respon</span>
+                </div>
+                <div class="mini-stat">
+                    <strong>Custom</strong>
+                    <span>Setiap kebutuhan</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Keunggulan perusahaan">
+            <div class="trust-item">
+                <span class="label">Desain</span>
+                <strong>Disesuaikan kebutuhan</strong>
+            </div>
+            <div class="trust-item">
+                <span class="label">Kualitas</span>
+                <strong>Produk rapi & tahan lama</strong>
+            </div>
+            <div class="trust-item">
+                <span class="label">Proses</span>
+                <strong>Efisien, cepat, dan terukur</strong>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="section-heading">
+                <span>Produk populer</span>
+                <h2>Pakaian custom</h2>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="card-img"><img src="images/kaos-custom.png" alt="Kaos custom"></div>
+                    <h3>Kaos custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/seragam-custom.png" alt="Seragam custom"></div>
+                    <h3>Seragam custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/pdh custom.png" alt="Kemeja & PDH custom"></div>
+                    <h3>Kemeja & PDH custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/jersey-kustom.jpg" alt="Jersey custom"></div>
+                    <h3>Jersey custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/rompi-custom.jpg" alt="Rompi custom"></div>
+                    <h3>Rompi custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/jaket custom.jpeg" alt="Jaket custom"></div>
+                    <h3>Jaket custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/garment.svg" alt="Celana custom"></div>
+                    <h3>Celana custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/PSSI.png" alt="Pelengkap custom"></div>
+                    <h3>Pelengkap custom</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories categories-secondary">
+            <div class="section-heading">
+                <span>Promosi & branding</span>
+                <h2>Aksesoris & produk print</h2>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="card-img"><img src="images/name-card-custom.jpg" alt="ID Card custom"></div>
+                    <h3>ID Card custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/topi-custom.jpg" alt="Topi custom"></div>
+                    <h3>Topi custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/merch.svg" alt="Mug custom"></div>
+                    <h3>Mug custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/gantungan-kunci-custom.jpg" alt="Gantungan kunci custom"></div>
+                    <h3>Gantungan kunci</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/bener custom.jpg" alt="Bener custom"></div>
+                    <h3>Bener custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/mendali-custom.jpg" alt="Mendali custom"></div>
+                    <h3>Mendali & piagam</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/undangan-custom.png" alt="Undangan custom"></div>
+                    <h3>Undangan custom</h3>
+                </div>
+                <div class="category-card">
+                    <div class="card-img"><img src="images/baliho custom.jpg" alt="Baliho custom"></div>
+                    <h3>Baliho custom</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="section-heading left-aligned">
+                <span>Kenapa memilih kami</span>
+                <h2>Standar kerja yang konsisten</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Produksi terukur</h3>
+                    <p>Proses pengerjaan dibuat rapi dan terjadwal agar hasil tetap konsisten dari order pertama hingga akhir.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Desain fleksibel</h3>
+                    <p>Anda bisa kirim referensi desain atau kebutuhan spesifik, lalu kami bantu sesuaikan dengan kebutuhan Anda.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Komunikasi jelas</h3>
+                    <p>Tim kami siap membantu dari konsultasi bahan, model, hingga detail finishing produk yang Anda butuhkan.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CS PRIN. Web dibuat oleh Tim Development. Kontak tim development: <a href="tel:085134625265">085134625265</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

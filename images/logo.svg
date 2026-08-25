@@ -1,0 +1,12 @@
+<svg width="620" height="180" viewBox="0 0 620 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="24" width="132" height="132" rx="32" fill="#171717"/>
+  <path d="M49 54H70C85 54 97 63 97 76C97 91 84 100 67 100H56V122H49V54ZM56 61V93H66C80 93 88 87 88 76C88 65 80 61 66 61H56Z" fill="#F7F4F0"/>
+  <path d="M110 54H122L102 122H90L110 54Z" fill="#D9A66C"/>
+  <path d="M102 122H122L110 143H90L102 122Z" fill="#D9A66C"/>
+  <path d="M49 130H89V122H49V130Z" fill="#F7F4F0"/>
+
+  <text x="172" y="80" fill="#171717" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="42" letter-spacing="-1.5">CS</text>
+  <text x="240" y="80" fill="#D9A66C" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="42" letter-spacing="-1.5">PRIN</text>
+  <text x="174" y="111" fill="#5F5F5A" font-family="Arial, sans-serif" font-size="14" letter-spacing="5">PRINT &amp; CUSTOM</text>
+  <rect x="174" y="126" width="220" height="5" rx="2.5" fill="#D9A66C"/>
+</svg>
